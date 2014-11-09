@@ -5,7 +5,7 @@ def randomword(length):
    return ''.join(random.choice(string.lowercase) for i in range(length))
 
 def download_img(url):
-	ext = url.split(".").lower()[-1];
+	ext = url.split(".")[-1]
 	filename = randomword(10)
 	response = requests.get(url, stream=True)
 	with open(filename + '.'+ ext, 'wb') as out_file:
